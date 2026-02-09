@@ -58,14 +58,8 @@ console.log(totalNumber);
 
 //funzione per controllare se il numero è pari(even) o dispari(odd)
 function isEven(numb) {
-    //NOTA: si potrebbe fare anche con * return numb % 2 === 0 *
-    if (numb % 2 === 0) {
-        //SE il numero diviso per due da resto di 0 è pari
-        return true
-    } else {
-        //ALTRIMENTI è dispari
-        return false
-    }
+    //SE il numero diviso per 2 non da resto allora è pari
+    return (numb % 2 === 0)
 }
 //variabile con il risultato della funzione isEven, booleano
 const evenOrOdd = isEven(totalNumber)
