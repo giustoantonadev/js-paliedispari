@@ -37,7 +37,7 @@ Dichiariamo chi ha vinto.
 */
 
 // chiedi all'utente di scegliere fra pari(even) e dispari(odd)
-const even_or_odd_choice = prompt('CHOOSE! Even or Odd?');
+const even_or_odd_choice = prompt('CHOOSE! Even or Odd?').toLowerCase(); //added tolowercase so the result wont be ruined 'cause case sensitive
 // chiedi all'utente di inserire un numero compreso fra 1 e 5
 const user_number = Number(prompt("type a number from 1 to 5!"));
 // log il numero scelto dall'utente
@@ -75,7 +75,7 @@ function whoWins(user_choice, totalNumber) {
     //SE il numero totale è pari(even) E la scelta dell'utente è even(pari), l'utente vince
     if (isEven(totalNumber) && user_choice === "even") {
         return "USER WINS!"
-    } else if (!isEven(totalNumber) && user_number === "odd") {
+    } else if (!isEven(totalNumber) && user_choice === "odd") {
         //ALTRIMENTI SE il numero totale è dispari(odd) E la scelta dell'utente è odd(dispari), l'utente vince 
         return "USER WINS!"
     } else {
